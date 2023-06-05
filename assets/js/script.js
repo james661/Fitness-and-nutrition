@@ -1,10 +1,10 @@
 var muscle = "biceps";
-fetch("https://api.api-ninjas.com/v1/exercises?muscle=" + muscle, {
-  method: "GET",
-  headers: {
-    "X-Api-Key": "YOUR_API_KEY",
-    "Content-Type": "application/json",
-  },
+fetch("https://api.api-ninjas.com/v1/exercises?muscle="{
+  // method: "GET",
+  // headers: {
+  //   "X-Api-Key": "YOUR_API_KEY",
+  //   "Content-Type": "application/json",
+  // },
 })
   .then(function (response) {
     if (!response.ok) {
@@ -18,3 +18,4 @@ fetch("https://api.api-ninjas.com/v1/exercises?muscle=" + muscle, {
   .catch(function (error) {
     console.error("Error: ", error);
   });
+
