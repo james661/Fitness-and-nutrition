@@ -47,15 +47,32 @@ fetch(url, {
     console.log("response")
 
     if (!response.ok) {
-      throw new Error("Network response was not ok");
-      
+      throw new Error("Excercise Network response was not ok");
+
     }
     return response.json();
   })
   .then(function (result) {
-    console.log(result);
+    console.log("Excercise" result);
   })
   .catch(function (error) {
-    console.error("Error: ", error);
+    console.error("Excercise Error: ", error);
   });
 
+
+  fetch(
+    "https://api.spoonacular.com/recipes/random?number=1"
+  )
+
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error("Recipe Network response was not ok");
+      }
+      return response.json();
+    })
+    .then(function (result) {
+      console.log("Recipe" result);
+    })
+    .catch(function (error) {
+      console.error("Recipe Error: ", error);
+    });
