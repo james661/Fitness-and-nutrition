@@ -27,11 +27,48 @@
     </ul>
   </header>
   <main>
-
+<h1>Choose Your</h1>
+<p></p>
+<h1></h1>
   </main>
 
 
  
+<form action="#">
+
+  <fieldset>
+    <label for="speed">Muscle</label>
+    <select name="speed" id="speed">
+      <option>Slower</option>
+      <option>Slow</option>
+      <option selected="selected">Medium</option>
+      <option>Fast</option>
+      <option>Faster</option>
+    </select>
+
+    <label for="files">Type</label>
+    <select name="files" id="files">
+      <optgroup label="Bulking">
+        <option value="jquery">powerlifting</option>
+        <option value="jquery">Strongman</option>
+        <option value="jquery">Strength</option>
+        <option value="jqueryui">Olympic weightlifting</option>
+      </optgroup>
+      <optgroup label="Cardio">
+        <option value="somefile">Cardio</option>
+        <option value="someotherfile">Stretching</option>
+      </optgroup>
+    </select>
+
+    <label for="number">Difficulty</label>
+    <select name="number" id="number">
+      <option>beginner</option>
+      <option selected="selected">intermediate</option>
+      <option>Expert</option>
+    </select>
+  </fieldset>
+
+</form>
 
  <script>
   $( function() {
