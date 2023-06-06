@@ -8,8 +8,40 @@
 
 /* #randWrkOuts {} */
 .header {
+  background-color: var(--color-2);
+  color: var(--color-5);
+  height: 100px;
+ 
+}
 
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  position: relative;
+  top: -50px;
+  margin: 10px;
 }
 
 .nav {
+  color: var(--color-4); 
+  margin: 5px;
 }
+
+#logo {
+  width: 150px;
+
+}
+
+button {
+  background-color: var(--color-2);
+  color: var(--color-4);
+  width: 200px;
+  height: 40px;
+}
+
+button:hover {
+  background-color: var(--color-3);
+  color: var(--color-1);
+}
+
