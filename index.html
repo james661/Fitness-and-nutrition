@@ -20,14 +20,10 @@
   <header class="header">
     <img src="./assets/images/" alt="fit-N-fresh logo">
     <ul class="nav">
-        <li>Workouts</li>
-        <li>Diets</li>
-        <li>Get Workouts</li>
-        <li>Contact Us</li>
     </ul>
   </header>
   <main>
-<h1>Choose Your</h1>
+<h1>Choose Your Workout</h1>
 <p></p>
 <h1></h1>
   </main>
@@ -37,12 +33,12 @@
 <form action="#">
 
   <fieldset>
-    <label for="speed">Muscle</label>
+    <label for="speed">Body Parts</label>
     <select name="speed" id="speed">
-      <option>Slower</option>
-      <option>Slow</option>
-      <option selected="selected">Medium</option>
-      <option>Fast</option>
+      <option>Back</option>
+      <option>Chest</option>
+      <option selected="selected">Lower Arm</option>
+      <option>Lower Leg</option>
       <option>Faster</option>
     </select>
 
@@ -70,19 +66,19 @@
 
 </form>
 
- <script>
+ <!-- <script>
   $( function() {
     $( ".widget input[type=submit], .widget a, .widget button" ).button();
     $( "button, input, a" ).on( "click", function( event ) {
       event.preventDefault();
     } );
   } );
-  </script>
+  </script> -->
 </head>
 <body>
 <div class="widget" id="randWrkOuts">
   <h1>Work Out</h1>
-  <button>A button element</button>
+  <button id="start">A button element</button>
 </div>
 
 
