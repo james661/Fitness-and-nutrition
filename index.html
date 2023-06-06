@@ -11,90 +11,97 @@
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet" />
   <!-- JQuery CDN -->
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
-<!-- Style CSS -->
+  <!-- Style CSS -->
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
 
+
   <!--  ---------------Header and Nav bar -------- -->
-<header class="header">
-  <img id="logo" src="./assets/images/Fit n Fresh Logo.png" alt="fit-N-fresh logo">
-  <nav class="nav-container">
-    <a class="nav" href="#Workouts">Workouts</a>
-    <br>
-    <a class="nav" href="#Recipes">Recipes</a>
-    <br>
-    <a class="nav" href="#Placeholder">Placeholder</a>
-  </nav>
-</header>
+  <header class="header">
+    <img id="logo" src="./assets/images/Fit n Fresh Logo.png" alt="fit-N-fresh logo">
+    <nav class="nav-container">
+      <a class="nav" href="#Workouts">Workouts</a>
+      <br>
+      <a class="nav" href="#Recipes">Recipes</a>
+      <br>
+      <a class="nav" href="#Placeholder">Placeholder</a>
+    </nav>
+  </header>
+
+
+  <!--  -->
   <main>
-<h1>Choose Your Workout</h1>
-<p></p>
-<h1></h1>
-  </main>
 
 
- 
-<form action="#">
+    <container class="WorkoutPicker">
+      <h1>Choose Your Workout</h1>
+      <p></p>
+      <h1></h1>
 
-  <fieldset>
-    <label for="speed">Body Parts</label>
-    <select name="speed" id="speed">
-      <option>Back</option>
-      <option>Chest</option>
-      <option selected="selected">Lower Arm</option>
-      <option>Lower Leg</option>
-      <option>Faster</option>
-    </select>
 
-    <label for="files">Type</label>
-    <select name="files" id="files">
-      <optgroup label="Bulking">
-        <option value="jquery">powerlifting</option>
-        <option value="jquery">Strongman</option>
-        <option value="jquery">Strength</option>
-        <option value="jqueryui">Olympic weightlifting</option>
-      </optgroup>
-      <optgroup label="Cardio">
-        <option value="somefile">Cardio</option>
-        <option value="someotherfile">Stretching</option>
-      </optgroup>
-    </select>
 
-    <label for="number">Difficulty</label>
-    <select name="number" id="number">
-      <option>beginner</option>
-      <option selected="selected">intermediate</option>
-      <option>Expert</option>
-    </select>
-  </fieldset>
+      <form action="#">
 
-</form>
+        <fieldset>
+          <label for="speed">Body Parts</label>
+          <option name="speed" id="speed">
+          <option>Back</option>
+          <option>Chest</option>
+          <option selected="selected">Lower Arm</option>
+          <option>Lower Leg</option>
+          <option>Faster</option>
+          </select>
 
- <!-- <script>
+          <label for="files">Type</label>
+          <select name="files" id="files">
+            <optgroup label="Bulking">
+              <option value="jquery">powerlifting</option>
+              <option value="jquery">Strongman</option>
+              <option value="jquery">Strength</option>
+              <option value="jqueryui">Olympic weightlifting</option>
+            </optgroup>
+            <optgroup label="Cardio">
+              <option value="somefile">Cardio</option>
+              <option value="someotherfile">Stretching</option>
+            </optgroup>
+          </select>
+
+          <label for="number">Difficulty</label>
+          <select name="number" id="number">
+            <option>beginner</option>
+            <option selected="selected">intermediate</option>
+            <option>Expert</option>
+          </select>
+        </fieldset>
+
+      </form>
+    </container>
+
+    <!-- <script>
   $( function() {
     $( ".widget input[type=submit], .widget a, .widget button" ).button();
     $( "button, input, a" ).on( "click", function( event ) {
       event.preventDefault();
     } );
   } );
-  </script> -->
-</head>
-<body>
-<div class="widget" id="randWrkOuts">
-  <h1>Work Out</h1>
-  <button>Get my workout!</button>
-</div>
+</script> -->
 
+    <div class="widget" id="randWrkOuts">
+      <h1>Work Out</h1>
+      <button>Get my workout!</button>
+    </div>
 
-      <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <!-- DayJS -->
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
-      <!-- Script.JS -->
-    <script src="./assets/js/script.js"></script>
+  </main>
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <!-- DayJS -->
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+  <!-- Script.JS -->
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
