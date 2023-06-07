@@ -11,15 +11,8 @@ var bodyPart = [
   ,
 ];
 
-// var type = [
-// "cardio",
-// "olympic_weightlifting",
-// "plyometrics",
-// "powerlifting",
-// "strength",
-// "stretching",
-// "strongman",
-// ];
+ var equipment = ["barbell", "rope", "body-weight", "assisted", "cable","leverage machine", "stability ball"
+];
 
 // var difficulty = [
 // "beginner",
@@ -68,3 +61,5 @@ fetch(`${endpoint}`)
   .catch((error) => {
     console.error("Error:", error.message);
   });
+
+
