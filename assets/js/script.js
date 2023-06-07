@@ -1,63 +1,47 @@
-var muscle = [
-"abdominals",
-"abductors",
-"adductors",
-"biceps",
-"calves",
-"chest",
-"forearms",
-"glutes",
-"hamstrings",
-"lats",
-"lower_back",
-"middle_back",
-"neck",
-"quadriceps",
-"traps",
-"triceps",
+var bodyPart = [
+"waist",
 ];
 
-var type = [
-"cardio",
-"olympic_weightlifting",
-"plyometrics",
-"powerlifting",
-"strength",
-"stretching",
-"strongman",
-];
+// var type = [
+// "cardio",
+// "olympic_weightlifting",
+// "plyometrics",
+// "powerlifting",
+// "strength",
+// "stretching",
+// "strongman",
+// ];
 
-var difficulty = [
-"beginner",
-"intermediate",
-"expert",
-];
+// var difficulty = [
+// "beginner",
+// "intermediate",
+// "expert",
+// ];
 
-// var url = "https://api.api-ninjas.com/v1/exercises?muscle=" + muscle;
+var url = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart[0]}`;
 
-// fetch(url, {
-//   method: "GET",
-//   headers: {
-//     "X-Api-Key": "8Ds5VZeW7N2pLZq1C7lxIg==MxRFF9ItX3ahpjcO",
-//     "Content-Type": "application/json",
-//   },
+fetch(url, {
+  method: "GET",
+headers: {
+		'X-RapidAPI-Key': 'b5a440c4d4msh54112a87c5e9245p18176fjsnfa9cc2dad087',
+		'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+	}
+})
+  .then(function (response) {
+    console.log("response")
 
-// })
-//   .then(function (response) {
-//     console.log("response")
+    if (!response.ok) {
+      throw new Error("Excercise Network response was not ok");
 
-//     if (!response.ok) {
-//       throw new Error("Excercise Network response was not ok");
-
-//     }
-//     return response.json();
-//   })
-//   .then(function (result) {
-//     console.log("Excercise" result);
-//   })
-//   .catch(function (error) {
-//     console.error("Excercise Error: ", error);
-//   });
+    }
+    return response.json();
+  })
+  .then(function (result) {
+    console.log("Excercise", result);
+  })
+  .catch(function (error) {
+    console.error("Excercise Error: ", error);
+  });
 
 
 var apiKey = "0ed9736aeb18498bb0f2d424ed245c01";
