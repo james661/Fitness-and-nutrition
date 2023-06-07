@@ -76,6 +76,7 @@
 
 
         </form>
+        
 
         <!-- <script>
         $( function() {
@@ -96,8 +97,40 @@
 
       <div class="recipesection">
         <h1>Choose Your Recipe</h1>
+  <form action="#">
+      <label for="bodyPart">Body Parts</label>
+      <select name="bodyPart" id="bodyPart">
+        <option name="bodyPart" id="bodyPart">
+        <option>Back</option>
+        <option>Chest</option>
+        <option selected="selected">Lower Arm</option>
+        <option>Lower Leg</option>
+        <option>Faster</option>
+      </select>
 
-        <!-- ADD RECIPE THINGS HERE---- -->
+      <label for="files">Type</label>
+      <select name="files" id="files">
+        <optgroup label="Bulking">
+          <option>powerlifting</option>
+          <option>Strongman</option>
+          <option>Strength</option>
+          <option value="jqueryui">Olympic weightlifting</option>
+        </optgroup>
+        <optgroup label="Cardio">
+          <option value="somefile">Cardio</option>
+          <option value="someotherfile">Stretching</option>
+        </optgroup>
+      </select>
+
+      <label for="number">Difficulty</label>
+      <select name="number" id="number">
+        <option>beginner</option>
+        <option selected="selected">intermediate</option>
+        <option>Expert</option>
+      </select>
+
+
+</form>
 
         <div class="widget" id="randRecipes">
           <button>Get my recipe!</button>
