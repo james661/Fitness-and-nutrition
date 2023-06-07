@@ -45,35 +45,35 @@
       <form action="#">
         <label for="bodyPart">Body Parts</label>
         <select name="bodyPart" id="bodyPart">
-        <option name="bodyPart" id="bodyPart">
+        <optgroup label="Upper Body">
+        <option>Shoulders</option>
+        <option>Upper Arm</option>
         <option>Back</option>
-        <option>Chest</option>
-        <option selected="selected">Lower Arm</option>
+        <option selected="selected">Chest</option>
+        <option >Lower Arm</option>
+        <option>Upper Arm</option>
+        <optgroup label="lower Body">
         <option>Lower Leg</option>
-        <option>Faster</option>
+        <option>Upper leg</option>
+         <optgroup label="Core">
+       <option>Waist</option>
+        <option>Cardio</option>
         </select>
 
-        <label for="files">Type</label>
-        <select name="files" id="files">
+        <label for="equipment">equipment</label>
+        <select name="equipment" id="equipment">
           <optgroup label="Bulking">
-            <option >Powerlifting</option>
-            <option >Strongman</option>
-            <option >Strength</option>
-            <option value="jqueryui">Olympic weightlifting</option>
+            <option >barbell</option>
+            <option >rope</option>
+            <option >body-weight</option>
+            <option >assisted</option>
           </optgroup>
           <optgroup label="Cardio">
-            <option value="somefile">Cardio</option>
-            <option value="someotherfile">Stretching</option>
+            <option value="somefile">cable</option>
+            <option value="someotherfile">leverage machine</option>
+            <option >stability ball</option>
           </optgroup>
         </select>
-
-          <label for="number">Difficulty</label>
-          <select name="number" id="number">
-            <option>Beginner</option>
-            <option selected="selected">Intermediate</option>
-            <option>Expert</option>
-          </select>
-
 
         </form>
         
@@ -117,8 +117,8 @@
           <option value="jqueryui">Olympic weightlifting</option>
         </optgroup>
         <optgroup label="Cardio">
-          <option value="somefile">Cardio</option>
-          <option value="someotherfile">Stretching</option>
+          <option>Cardio</option>
+          <option >Stretching</option>
         </optgroup>
       </select>
 
