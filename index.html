@@ -33,52 +33,52 @@
 
   <!--  -->
   <main>
+    <section class="workoutandrecipecards">
+      <!-- ----------WORKOUT SECTION------------- -->
+      <div class="workoutsection">
+        <h1>Choose Your Workout</h1>
+        <p></p>
+        <h1></h1>
 
 
-    <div class="workoutsection">
-      <h1>Choose Your Workout</h1>
-      <p></p>
-      <h1></h1>
+
+        <form action="#">
 
 
+          <label for="speed">Body Parts</label>
+          <option name="speed" id="speed">
+          <option>Back</option>
+          <option>Chest</option>
+          <option selected="selected">Lower Arm</option>
+          <option>Lower Leg</option>
+          <option>Faster</option>
+          </select>
 
-      <form action="#">
+          <label for="files">Type</label>
+          <select name="files" id="files">
+            <optgroup label="Bulking">
+              <option>powerlifting</option>
+              <option>Strongman</option>
+              <option>Strength</option>
+              <option>Olympic weightlifting</option>
+            </optgroup>
+            <optgroup label="Cardio">
+              <option value="somefile">Cardio</option>
+              <option value="someotherfile">Stretching</option>
+            </optgroup>
+          </select>
 
-
-        <label for="speed">Body Parts</label>
-        <option name="speed" id="speed">
-        <option>Back</option>
-        <option>Chest</option>
-        <option selected="selected">Lower Arm</option>
-        <option>Lower Leg</option>
-        <option>Faster</option>
-        </select>
-
-        <label for="files">Type</label>
-        <select name="files" id="files">
-          <optgroup label="Bulking">
-            <option value="jquery">powerlifting</option>
-            <option value="jquery">Strongman</option>
-            <option value="jquery">Strength</option>
-            <option value="jqueryui">Olympic weightlifting</option>
-          </optgroup>
-          <optgroup label="Cardio">
-            <option value="somefile">Cardio</option>
-            <option value="someotherfile">Stretching</option>
-          </optgroup>
-        </select>
-
-        <label for="number">Difficulty</label>
-        <select name="number" id="number">
-          <option>beginner</option>
-          <option selected="selected">intermediate</option>
-          <option>Expert</option>
-        </select>
+          <label for="number">Difficulty</label>
+          <select name="number" id="number">
+            <option>beginner</option>
+            <option selected="selected">intermediate</option>
+            <option>Expert</option>
+          </select>
 
 
-      </form>
+        </form>
 
-      <!-- <script>
+        <!-- <script>
         $( function() {
           $( ".widget input[type=submit], .widget a, .widget button" ).button();
           $( "button, input, a" ).on( "click", function( event ) {
@@ -87,11 +87,33 @@
         } );
       </script> -->
 
-      <div class="widget" id="randWrkOuts">
-        <button>Get my workout!</button>
+        <div class="widget" id="randWrkOuts">
+          <button>Get my workout!</button>
+        </div>
       </div>
-    </div>
+      <!-- ---------END WORKOUT SECTION-------------- -->
 
+      <!-- ---------------------BEGIN RECIPE SECTION ---------------- -->
+
+      <div class="recipesection">
+        <h1>Choose Your Recipe</h1>
+
+        <!-- ADD RECIPE THINGS HERE---- -->
+
+        <div class="widget" id="randRecipes">
+          <button>Get my recipe!</button>
+        </div>
+      </div>
+      <br>
+      <!-- ---------------------END RECIPE SECTION ---------------- -->
+    </section>
+    <!-- ----------BEGIN MOTIVATIONAL QUOTE SECTION--------------- -->
+    <div class="motivQuotes">
+    <h1>Motivational Quote</h1>
+    <h1>Motivational Quote</h1>
+    <h1>Motivational Quote</h1>
+    </div>
+    <footer>You Only Live Once - Don't F it Up &#x1F4AA; &#x1F966;</footer>
   </main>
 
   <!-- JQuery -->
