@@ -7,8 +7,8 @@
 }
 
 main {
-  background: linear-gradient(to bottom, #b5ffe1, #4e878c);
-  color: ;
+  /* background: linear-gradient(to bottom, #b5ffe1, #4e878c); */
+  background-color: var(--lettuce);
 }
 .header {
   background-color: var(--leaf);
@@ -35,8 +35,8 @@ main {
 }
 
 button {
-  background-color: var(--leaf);
-  color: var(--guava);
+  background-color: var(--guava);
+  color: var(--leaf);
   width: 200px;
   height: 40px;
   margin: 15px;
@@ -44,30 +44,33 @@ button {
 
 button:hover {
   background-color: var(--grass);
-  color: var(--lettuce);
+  color: var(--spinach);
 }
 
 .workoutsection {
-  background-color: var(--lettuce);
+  background: linear-gradient(to bottom, #b5ffe1, #65b891);
   border: solid 4px var(--guava);
+  color: var(--spinach);
   margin-top: 30px;
-  width: 50%;
   margin-right: 10px;
+  margin-left: 10px;
+  width: 50%;
   padding: 10px;
-   display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .recipesection {
-  background-color: var(--lettuce);
+  background: linear-gradient(to bottom, #b5ffe1, #65b891);
   border: solid 4px var(--guava);
+  color: var(--spinach);
   margin-top: 30px;
-  width: 50%;
   margin-left: 10px;
+  margin-right: 10px;
+  width: 50%;
   padding: 10px;
-   display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -78,10 +81,24 @@ button:hover {
 }
 
 .motivQuotes {
+  color: var(--spinach);
+  background: linear-gradient(to bottom, #b5ffe1, #65b891);
+  border: solid 4px var(--guava);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+.motivQuotes h2 {
+  text-align: center;
+}
+
+
 
 footer {
   display: flex;
@@ -90,5 +107,4 @@ footer {
   background-color: var(--leaf);
   padding: 15px;
   color: var(--guava);
-  
 }
