@@ -1,5 +1,14 @@
 var bodyPart = [
-"waist",
+  "waist",
+  "upper legs",
+  "back",
+  "lower legs",
+  "chest",
+  "upper arms",
+  "shoulders",
+  "cardio",
+  "lower arms",
+  ,
 ];
 
 // var type = [
@@ -18,7 +27,7 @@ var bodyPart = [
 // "expert",
 // ];
 
-var url = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart[0]}`;
+var url = `https://exercisedb.p.rapidapi.com/exercises/`;
 
 fetch(url, {
   method: "GET",
