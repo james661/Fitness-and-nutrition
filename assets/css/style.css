@@ -8,7 +8,7 @@
 
 main {
   /* background: linear-gradient(to bottom, #b5ffe1, #4e878c); */
-  background-color: var(--lettuce);
+  background-color: var(--guava);
 }
 .header {
   background-color: var(--leaf);
@@ -50,7 +50,7 @@ button:hover {
 
 .workoutsection {
   background: linear-gradient(to bottom, #b5ffe1, #65b891);
-  border: solid 4px var(--guava);
+  border: solid 2px var(--spinach);
   color: var(--spinach);
   margin-top: 30px;
   margin-right: 10px;
@@ -64,7 +64,7 @@ button:hover {
 
 .recipesection {
   background: linear-gradient(to bottom, #b5ffe1, #65b891);
-  border: solid 4px var(--guava);
+  border: solid 2px var(--spinach);
   color: var(--spinach);
   margin-top: 30px;
   margin-left: 10px;
@@ -84,7 +84,7 @@ button:hover {
 .motivQuotes {
   color: var(--spinach);
   background: linear-gradient(to bottom, #b5ffe1, #65b891);
-  border: solid 4px var(--guava);
+  border: solid 2px var(--spinach);
   margin-top: 30px;
   margin-bottom: 150px;
   margin-left: 10px;
