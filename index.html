@@ -23,9 +23,9 @@
     <img id="logo" src="./assets/images/Fit n Fresh Logo.png" alt="fit-N-fresh logo">
     <nav class="nav-container">
       <a class="nav" href="#Workouts">Workouts</a>
-      
+
       <a class="nav" href="#Recipes">Recipes</a>
-    
+
       <a class="nav" href="#Placeholder">Placeholder</a>
     </nav>
   </header>
@@ -36,47 +36,42 @@
     <section class="workoutandrecipecards">
       <!-- ----------WORKOUT SECTION------------- -->
       <div class="workoutsection">
-        <h1>Choose Your Workout</h1>
-        <p></p>
-        <h1></h1>
+        <h1>Let's Workout</h1>
+        <form action="#">
+          <label for="bodyPart">Body Parts:</label>
+          <select name="bodyPart" id="bodyPart">
+            <option>Back</option>
+            <option>Chest</option>
+            <option selected="selected">Lower Arm</option>
+            <option>Lower Leg</option>
+            <option>Faster</option>
+            <br>
+          </select>
+          <br>
 
+          <label for="files">Type:</label>
+          <select name="files" id="files">
+            <optgroup label="Bulking">
+              <option>Powerlifting</option>
+              <option>Strongman</option>
+              <option>Strength</option>
+              <option value="jqueryui">Olympic weightlifting</option>
+            </optgroup>
+            <optgroup label="Cardio">
+              <option value="somefile">Cardio</option>
+              <option value="someotherfile">Stretching</option>
+            </optgroup>
+          </select>
+          <br>
 
-
-      <form action="#">
-        <label for="bodyPart">Body Parts</label>
-        <select name="bodyPart" id="bodyPart">
-        <option name="bodyPart" id="bodyPart">
-        <option>Back</option>
-        <option>Chest</option>
-        <option selected="selected">Lower Arm</option>
-        <option>Lower Leg</option>
-        <option>Faster</option>
-        </select>
-
-        <label for="files">Type</label>
-        <select name="files" id="files">
-          <optgroup label="Bulking">
-            <option >Powerlifting</option>
-            <option >Strongman</option>
-            <option >Strength</option>
-            <option value="jqueryui">Olympic weightlifting</option>
-          </optgroup>
-          <optgroup label="Cardio">
-            <option value="somefile">Cardio</option>
-            <option value="someotherfile">Stretching</option>
-          </optgroup>
-        </select>
-
-          <label for="number">Difficulty</label>
+          <label for="number">Difficulty:</label>
           <select name="number" id="number">
             <option>Beginner</option>
             <option selected="selected">Intermediate</option>
             <option>Expert</option>
           </select>
-
-
         </form>
-        
+
 
         <!-- <script>
         $( function() {
@@ -96,41 +91,42 @@
       <!-- ---------------------BEGIN RECIPE SECTION ---------------- -->
 
       <div class="recipesection">
-        <h1>Choose Your Recipe</h1>
-  <form action="#">
-      <label for="bodyPart">Body Parts</label>
-      <select name="bodyPart" id="bodyPart">
-        <option name="bodyPart" id="bodyPart">
-        <option>Back</option>
-        <option>Chest</option>
-        <option selected="selected">Lower Arm</option>
-        <option>Lower Leg</option>
-        <option>Faster</option>
-      </select>
+        <h1>Let's Eat</h1>
+        <form action="#">
+          <label for="bodyPart">Body Parts</label>
+          <select name="bodyPart" id="bodyPart">
+            <option name="bodyPart" id="bodyPart">
+            <option>Back</option>
+            <option>Chest</option>
+            <option selected="selected">Lower Arm</option>
+            <option>Lower Leg</option>
+            <option>Faster</option>
+          </select>
+          <br>
 
-      <label for="files">Type</label>
-      <select name="files" id="files">
-        <optgroup label="Bulking">
-          <option>powerlifting</option>
-          <option>Strongman</option>
-          <option>Strength</option>
-          <option value="jqueryui">Olympic weightlifting</option>
-        </optgroup>
-        <optgroup label="Cardio">
-          <option value="somefile">Cardio</option>
-          <option value="someotherfile">Stretching</option>
-        </optgroup>
-      </select>
+          <label for="files">Type</label>
+          <select name="files" id="files">
+            <optgroup label="Bulking">
+              <option>powerlifting</option>
+              <option>Strongman</option>
+              <option>Strength</option>
+              <option value="jqueryui">Olympic weightlifting</option>
+            </optgroup>
+            <optgroup label="Cardio">
+              <option value="somefile">Cardio</option>
+              <option value="someotherfile">Stretching</option>
+            </optgroup>
+          </select>
+          <br>
 
-      <label for="number">Difficulty</label>
-      <select name="number" id="number">
-        <option>beginner</option>
-        <option selected="selected">intermediate</option>
-        <option>Expert</option>
-      </select>
-
-
-</form>
+          <label for="number">Difficulty</label>
+          <select name="number" id="number">
+            <option>beginner</option>
+            <option selected="selected">intermediate</option>
+            <option>Expert</option>
+          </select>
+          <br>
+        </form>
 
         <div class="widget" id="randRecipes">
           <button>Get my recipe!</button>
@@ -141,11 +137,12 @@
     </section>
     <!-- ----------BEGIN MOTIVATIONAL QUOTE SECTION--------------- -->
     <div class="motivQuotes">
-      <h2>"If we could give every individual the right amount of nourishment and exercise, not too little and not too much, we would have the safest way to health." - Hippocrates.</h2>
+      <h2>"If we could give every individual the right amount of nourishment and exercise, not too little and not too
+        much, we would have the safest way to health." - Hippocrates.</h2>
       <h1>Motivational Quote</h1>
     </div>
     <footer>
-      <h4>You Only Live Once - Don't F it Up &#x1F4AA; &#x1F966;</h4>
+      <h3>You Only Live Once - Don't F it Up &#x1F4AA; &#x1F966;</h3>
     </footer>
   </main>
 
