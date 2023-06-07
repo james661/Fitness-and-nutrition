@@ -13,7 +13,7 @@ main {
 .header {
   background-color: var(--leaf);
   color: var(--spinach);
-  height: 100px;
+  height: 120px;
 }
 
 .nav-container {
@@ -28,10 +28,11 @@ main {
 .nav {
   color: var(--guava);
   margin: 5px;
+  font-size: 1.3em;
 }
 
 #logo {
-  width: 150px;
+  width: 190px;
 }
 
 button {
@@ -85,10 +86,10 @@ button:hover {
   background: linear-gradient(to bottom, #b5ffe1, #65b891);
   border: solid 4px var(--guava);
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 150px;
   margin-left: 10px;
   margin-right: 10px;
-  padding: 20px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
