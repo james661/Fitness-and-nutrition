@@ -33,12 +33,12 @@
 
   <!--  -->
   <main>
-
-
-    <div class="workoutsection">
-      <h1>Choose Your Workout</h1>
-      <p></p>
-      <h1></h1>
+    <section class="workoutandrecipecards">
+      <!-- ----------WORKOUT SECTION------------- -->
+      <div class="workoutsection">
+        <h1>Choose Your Workout</h1>
+        <p></p>
+        <h1></h1>
 
 
 
@@ -67,17 +67,17 @@
           </optgroup>
         </select>
 
-        <label for="number">Difficulty</label>
-        <select name="number" id="number">
-          <option>beginner</option>
-          <option selected="selected">intermediate</option>
-          <option>Expert</option>
-        </select>
+          <label for="number">Difficulty</label>
+          <select name="number" id="number">
+            <option>beginner</option>
+            <option selected="selected">intermediate</option>
+            <option>Expert</option>
+          </select>
 
 
-      </form>
+        </form>
 
-      <!-- <script>
+        <!-- <script>
         $( function() {
           $( ".widget input[type=submit], .widget a, .widget button" ).button();
           $( "button, input, a" ).on( "click", function( event ) {
@@ -86,11 +86,34 @@
         } );
       </script> -->
 
-      <div class="widget" id="randWrkOuts">
-        <button>Get my workout!</button>
+        <div class="widget" id="randWrkOuts">
+          <button>Get my workout!</button>
+        </div>
       </div>
-    </div>
+      <!-- ---------END WORKOUT SECTION-------------- -->
 
+      <!-- ---------------------BEGIN RECIPE SECTION ---------------- -->
+
+      <div class="recipesection">
+        <h1>Choose Your Recipe</h1>
+
+        <!-- ADD RECIPE THINGS HERE---- -->
+
+        <div class="widget" id="randRecipes">
+          <button>Get my recipe!</button>
+        </div>
+      </div>
+      <br>
+      <!-- ---------------------END RECIPE SECTION ---------------- -->
+    </section>
+    <!-- ----------BEGIN MOTIVATIONAL QUOTE SECTION--------------- -->
+    <div class="motivQuotes">
+      <h2>"If we could give every individual the right amount of nourishment and exercise, not too little and not too much, we would have the safest way to health." - Hippocrates.</h2>
+      <h1>Motivational Quote</h1>
+    </div>
+    <footer>
+      <h4>You Only Live Once - Don't F it Up &#x1F4AA; &#x1F966;</h4>
+    </footer>
   </main>
 
   <!-- JQuery -->

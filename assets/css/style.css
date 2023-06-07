@@ -1,17 +1,19 @@
 :root {
-  --lettuce: #B5FFE1;
-  --leaf: #93E5AB;
-  --grass: #65B891;
-  --guava: #4E878C;
-  --spinach: #00241B;
+  --lettuce: #b5ffe1;
+  --leaf: #93e5ab;
+  --grass: #65b891;
+  --guava: #4e878c;
+  --spinach: #00241b;
 }
 
-/* #randWrkOuts {} */
+main {
+  /* background: linear-gradient(to bottom, #b5ffe1, #4e878c); */
+  background-color: var(--lettuce);
+}
 .header {
   background-color: var(--leaf);
   color: var(--spinach);
   height: 100px;
- 
 }
 
 .nav-container {
@@ -24,13 +26,12 @@
 }
 
 .nav {
-  color: var(--guava); 
+  color: var(--guava);
   margin: 5px;
 }
 
 #logo {
   width: 150px;
-
 }
 
 button {
@@ -39,18 +40,71 @@ button {
   width: 200px;
   height: 40px;
   margin: 15px;
- 
 }
 
 button:hover {
   background-color: var(--grass);
-  color: var(--lettuce);
+  color: var(--spinach);
 }
 
 .workoutsection {
-  background-color: var(--lettuce);
+  background: linear-gradient(to bottom, #b5ffe1, #65b891);
   border: solid 4px var(--guava);
+  color: var(--spinach);
   margin-top: 30px;
-  width: 45%;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.recipesection {
+  background: linear-gradient(to bottom, #b5ffe1, #65b891);
+  border: solid 4px var(--guava);
+  color: var(--spinach);
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.workoutandrecipecards {
+  display: flex;
+  flex-direction: row;
+}
+
+.motivQuotes {
+  color: var(--spinach);
+  background: linear-gradient(to bottom, #b5ffe1, #65b891);
+  border: solid 4px var(--guava);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.motivQuotes h2 {
+  text-align: center;
+}
+
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--leaf);
+  padding: 15px;
+  color: var(--guava);
+}
