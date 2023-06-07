@@ -34,7 +34,7 @@
 }
 
 button {
-  background-color: var(--guava;
+  background-color: var(--guava);
   color: var(--leaf);
   width: 200px;
   height: 40px;
@@ -47,10 +47,10 @@ button:hover {
   color: var(--lettuce);
 }
 
-.WorkoutPicker {
-background-color: var(--lettuce);
-border: solid 4px var(--guava);
-margin-top: 30px;
-width: 45%;
+.workoutsection {
+  background-color: var(--lettuce);
+  border: solid 4px var(--guava);
+  margin-top: 30px;
+  width: 45%;
 }
 
