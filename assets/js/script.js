@@ -1,24 +1,24 @@
 var bodyPart = [
-"",
+"waist",
 ];
 
-var type = [
-"cardio",
-"olympic_weightlifting",
-"plyometrics",
-"powerlifting",
-"strength",
-"stretching",
-"strongman",
-];
+// var type = [
+// "cardio",
+// "olympic_weightlifting",
+// "plyometrics",
+// "powerlifting",
+// "strength",
+// "stretching",
+// "strongman",
+// ];
 
-var difficulty = [
-"beginner",
-"intermediate",
-"expert",
-];
+// var difficulty = [
+// "beginner",
+// "intermediate",
+// "expert",
+// ];
 
-var url = `https://exercisedb.p.rapidapi.com/exercises`;
+var url = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart[0]}`;
 
 fetch(url, {
   method: "GET",
