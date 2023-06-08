@@ -46,7 +46,7 @@ headers: {
   });
 
 
-var apiKey = "43050d7446924af49c324ae43ecfbafa";
+var apiKey = "15078b5e06594cb3ab818e08ec72e030";
 var endpoint = `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}`;
 fetch(`${endpoint}`)
   .then((response) => {
@@ -61,5 +61,11 @@ fetch(`${endpoint}`)
   .catch((error) => {
     console.error("Error:", error.message);
   });
+
+
+
+
+
+
 
 
