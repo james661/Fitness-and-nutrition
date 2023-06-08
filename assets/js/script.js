@@ -73,18 +73,41 @@ function getWorkout(bodyP, equip) {
     });
 }
 
-var apiKey2 = "43050d7446924af49c324ae43ecfbafa";
-var endpoint = `https://api.spoonacular.com/recipes/random?apiKey=${apiKey2}`;
-fetch(`${endpoint}`)
+// --------------END WORKOUT SECTION------------------------------------
+// --------------EVERYTHING BELOW IS RECIPE BASED------------------------
+
+
+var dietSelect=document.getElementById("diet")
+var cuisineSelect=document.getElementById("cuisine")
+var intolerancesSelect=document.getElementById("intolerances")
+
+var apiReciKey = "43050d7446924af49c324ae43ecfbafa";
+var RecipeEndpoint = `https://api.spoonacular.com/recipes/complexSearch?diet=${dietSelect.value}&cuisine=${cuisineSelect.value}&intolerances=${intolerancesSelect.value}&number=1&apiKey=${apiReciKey}`;
+
+fetch(`${RecipeEndpoint}`)
   .then((response) => {
+    console.log("This recipe API works!")
     if (!response.ok) {
       throw new Error(`Error: ${response.status}`);
     }
     return response.json();
   })
   .then((data) => {
-    console.log(data, "chicken");
+    console.log(data, "meatballs");
   })
   .catch((error) => {
-    console.error("Error:", error.message);
+    console.error("Recipe Error:", error.message);
+  });
+
+document
+  .querySelector("#workoutForm")
+  .addEventListener("submit", function (sub) {
+    sub.preventDefault();
+    let bodyP = document.getElementById("bodyPart").value.toLowerCase();
+    let equip = document.getElementById("equipment").value.toLowerCase();
+    // getWorkOut(bodyPart, equipment);
+    // getgif(bodyPart, equipment);
+    // console.log(bodyP);
+    // console.log(equip);
+    getWorkout(bodyP, equip);
   });
