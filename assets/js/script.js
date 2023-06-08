@@ -8,7 +8,6 @@ var bodyPart = [
   "shoulders",
   "cardio",
   "lower arms",
-  ,
 ];
 
 var equipment = [
@@ -23,19 +22,13 @@ var equipment = [
 
 let randomwrkout = [];
 
-// var difficulty = [
-// "beginner",
-// "intermediate",
-// "expert",
-// ];
-
 const apiKey = "b5a440c4d4msh54112a87c5e9245p18176fjsnfa9cc2dad087";
 const options = {
   headers: {
     "X-RapidAPI-Key": "a410389ea3msha482df8372ade2bp19d872jsn0909b3343fdd",
     "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
   },
-}; 
+};
 
 document
   .querySelector("#workoutForm")
@@ -43,10 +36,6 @@ document
     sub.preventDefault();
     let bodyP = document.getElementById("bodyPart").value.toLowerCase();
     let equip = document.getElementById("equipment").value.toLowerCase();
-    // getWorkOut(bodyPart, equipment);
-    // getgif(bodyPart, equipment);
-    // console.log(bodyP);
-    // console.log(equip);
     getWorkout(bodyP, equip);
   });
 
@@ -73,13 +62,16 @@ function getWorkout(bodyP, equip) {
       let wrkoutName = document.createElement("h1");
       wrkoutContainer.setAttribute("id", "wrkoutContainer");
       wrkoutName.textContent = randomwrkout[index].name;
+      let wrkoutGif = document.createElement("h2");
 
+      var img = document.createElement("img");
+      img.src = randomwrkout[index].gifUrl;
+      img.alt = "Exercise GIF";
+
+      wrkoutContainer.append(wrkoutGif);
+      wrkoutGif.append(img);
       wrkoutContainer.append(wrkoutName);
       workoutR.append(wrkoutContainer);
-
-      // renderItems(name, data);
-      // renderItems(gifUrl, data),
-      //   (document.getElementById("workout").textContent = workout);
     })
     .catch((error) => {
       console.error(error);
