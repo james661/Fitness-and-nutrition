@@ -96,7 +96,6 @@ recipeButton.addEventListener("click", function () {
     .then((data) => {
       console.log(data.results[0]);
       recipeTitle.textContent = data.results[0].title;
-      // Change Title class to make visible
 
       // Update Image and change class to make visible
       recipeImage.src = data.results[0].image;
@@ -120,6 +119,7 @@ recipeButton.addEventListener("click", function () {
             ingredients.appendChild(ingredientItem);
           }
 
+          // --------------------- We know this is a lil ug, but it works and removes the splits that the API gifted us ------------------------------
           var splitInst = data.instructions.split("<ol>");
           var joinedInst1 = splitInst.join("");
           var splitInst2 = joinedInst1.split("</ol>");
@@ -133,7 +133,6 @@ recipeButton.addEventListener("click", function () {
           var splitInst6 = joinedInst5.split("</span>");
           var joinedInst6 = splitInst6.join("");
           console.log(joinedInst6);
-          // Change Title class to make visible
 
           // Update Image and change class to make visible
           instructions.textContent = joinedInst6;
