@@ -80,7 +80,7 @@ var dietSelect = document.getElementById("diet");
 var cuisineSelect = document.getElementById("cuisine");
 var intolerancesSelect = document.getElementById("intolerances");
 
-var apiReciKey = "43050d7446924af49c324ae43ecfbafa";
+var apiReciKey = "15078b5e06594cb3ab818e08ec72e030";
 var RecipeEndpoint = `https://api.spoonacular.com/recipes/complexSearch?diet=${dietSelect.value}&cuisine=${cuisineSelect.value}&intolerances=${intolerancesSelect.value}&number=15&apiKey=${apiReciKey}`;
 
 var recipeButton = document.getElementById("randRecipes");
@@ -106,12 +106,13 @@ recipeButton.addEventListener("click", function () {
       // Update Image and change class to make visible
       recipeImage.src = data.results[0].image;
       recipeSection.style.display = "block";
-      recipeImage.classList.remove(".unhideRecipeInfo"); 
-      recipeImage.classList.add(".showRecipeInfo"); 
+      recipeImage.classList.remove(".unhideRecipeInfo");
+      recipeImage.classList.add(".showRecipeInfo");
     })
     .catch((error) => {
       console.error("Recipe Error:", error.message);
     });
+  console.log(dietSelect.value);
 });
 
 // document
