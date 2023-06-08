@@ -33,17 +33,19 @@
 
   <!--  -->
   <main>
-<!-- ------First Quote Section --------------- -->
-        <div class="motivQuotes">
-          <h3>“Some things you have to do every day. Eating seven apples on Saturday night instead of one a day just isn’t going
-            to
-            get the job done.” – Jim Rohn</h3>
-        </div>
+    <!-- ------First Quote Section --------------- -->
+    <div class="motivQuotes">
+      <h3>“Some things you have to do every day. Eating seven apples on Saturday night instead of one a day just isn’t
+        going
+        to
+        get the job done.” – Jim Rohn</h3>
+    </div>
     <section class="workoutandrecipecards">
       <!-- ----------WORKOUT SECTION------------- -->
       <div class="workoutsection">
 
         <h1>Let's Workout!</h1>
+
         
       <form id="workoutForm" action="#">
         <label for="bodyPart">Body Parts</label>
@@ -84,6 +86,7 @@
           <button type="submit">Get my workout!</button>
           <section id="workoutResults"></section>
         </div>
+        
         </form>
       </div>
       <!-- ---------END WORKOUT SECTION-------------- -->
@@ -93,44 +96,50 @@
       <div class="recipesection">
 
         <h1>Choose Your Recipe</h1>
-  <form id="Food" action="#">
-      <label for="cuisine">Cuisine</label>
-      <select name="cuisine" id="cuisine">
-        <option name="cuisine" id="cuisine">
-        <option selected="selected">American</option>
-        <option>Italian</option>
-        <option>Mexican</option>
-        <option>Indian</option>
-        <option>Chinese</option>
-      </select>
-      <br>
-    
-      <label for="Intol">Intolerances</label>
-      <select name="files" id="files">
-          <option>Gluten</option>
-          <option>Dairy</option>
-          <option>Peanut</option>
-          <option>Seafood</option>
-          <option>Shellfish</option>
-          <option>Sesame</option>
+        <form id="Food" action="#">
+          <label for="cuisine">Cuisine</label>
+          <select name="cuisine" id="cuisine">
+            <!-- <option name="cuisine" id="cuisine"> -->
+            <option selected="selected">American</option>
+            <option value="italian">Italian</option>
+            <option>Mexican</option>
+            <option>Indian</option>
+            <option>Chinese</option>
+          </select>
+          <br>
 
-      </select>
-      <br>
+          <label for="Intol">Intolerances</label>
+          <select name="files" id="intolerances">
+            <option>Gluten</option>
+            <option value="dairy">Dairy</option>
+            <option>Peanut</option>
+            <option>Seafood</option>
+            <option>Shellfish</option>
+            <option>Sesame</option>
 
-      <label for="diet">Diet</label>
-      <select name="diet" id="diet">
-        <option selected="selected">Omnivore</option>
-        <option>Vegetarian</option>
-        <option>Pescetarian</option>
-        <option>Vegan</option>
-      </select>
-      <br>
+          </select>
+          <br>
 
-</form>
+          <label for="diet">Diet</label>
+          <select name="diet" id="diet">
+            <option selected="selected">Omnivore</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option>Pescetarian</option>
+            <option>Vegan</option>
+          </select>
+          <br>
+
+        </form>
 
 
         <div class="widget" id="randRecipes">
           <button>Grab my Recipe!</button>
+        </div>
+
+        <!-- Will show / hide recipe section -->
+        <div class="unhideRecipeInfo">
+          <h2 id="recipeTitle"></h2>
+          <img id="recipeImage" src="" alt="Recipe Image">
         </div>
       </div>
       <br>
