@@ -34,7 +34,7 @@ let randomwrkout = [
 const apiKey = "b5a440c4d4msh54112a87c5e9245p18176fjsnfa9cc2dad087";
 const options = {
   headers: {
-    "X-RapidAPI-Key": "b5a440c4d4msh54112a87c5e9245p18176fjsnfa9cc2dad087",
+    "X-RapidAPI-Key": "a410389ea3msha482df8372ade2bp19d872jsn0909b3343fdd",
     "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
   },
 };
