@@ -21,6 +21,10 @@ var equipment = [
   "stability ball",
 ];
 
+let randomwrkout = [
+
+]
+
 // var difficulty = [
 // "beginner",
 // "intermediate",
@@ -55,15 +59,25 @@ function getWorkout(bodyP, equip) {
       console.log(data);
       for (var i = 0; i < data.length; i++) {
         if (data[i].equipment === equip) {
-          // other stuff to do
-          /* 
-            store values in an array
-            pick random value from that array
-            display random value to user
-          */
-          console.log(data[i]);
+          randomwrkout.push(data[i]);
         }
       }
+      let index = Math.floor(Math.random() * randomwrkout.length);
+      console.log(randomwrkout[index]);
+      let workoutR = document.getElementById("workoutResults");
+      let check = document.getElementById("wrkoutContainer");
+      console.log(check)
+      if (check!==null) {
+        check.remove();
+      }
+      let wrkoutContainer = document.createElement("div");
+      let wrkoutName = document.createElement("h1");
+      wrkoutContainer.setAttribute("id","wrkoutContainer")
+      wrkoutName.textContent = randomwrkout[index].name;
+      
+      wrkoutContainer.append(wrkoutName);
+      workoutR.append(wrkoutContainer);
+
       // renderItems(name, data);
       // renderItems(gifUrl, data),
       //   (document.getElementById("workout").textContent = workout);
