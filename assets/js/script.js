@@ -57,7 +57,6 @@ function getWorkout(bodyP, equip) {
         if (data[i].equipment === equip) {
           // other stuff to do
           /* 
-
             store values in an array
             pick random value from that array
             display random value to user
