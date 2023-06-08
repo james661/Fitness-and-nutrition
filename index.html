@@ -45,7 +45,7 @@
 
         <h1>Let's Workout!</h1>
         
-      <form action="#">
+      <form id="workoutForm" action="#">
         <label for="bodyPart">Body Parts</label>
         <select name="bodyPart" id="bodyPart">
         <optgroup label="Upper Body">
@@ -79,22 +79,12 @@
           </optgroup>
         </select>
         <br>
-
-        </form>
-
-
-        <!-- <script>
-        $( function() {
-          $( ".widget input[type=submit], .widget a, .widget button" ).button();
-          $( "button, input, a" ).on( "click", function( event ) {
-            event.preventDefault();
-          } );
-        } );
-      </script> -->
-
         <div class="widget" id="randWrkOuts">
-          <button>Grab my Workout!</button>
+
+          <button type="submit">Get my workout!</button>
+
         </div>
+        </form>
       </div>
       <!-- ---------END WORKOUT SECTION-------------- -->
 
