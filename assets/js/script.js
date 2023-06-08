@@ -81,7 +81,7 @@ var cuisineSelect = document.getElementById("cuisine");
 var intolerancesSelect = document.getElementById("intolerances");
 
 var apiReciKey = "43050d7446924af49c324ae43ecfbafa";
-var RecipeEndpoint = `https://api.spoonacular.com/recipes/complexSearch?diet=${dietSelect.value}&cuisine=${cuisineSelect.value}&intolerances=${intolerancesSelect.value}&number=1&apiKey=${apiReciKey}`;
+var RecipeEndpoint = `https://api.spoonacular.com/recipes/complexSearch?diet=${dietSelect.value}&cuisine=${cuisineSelect.value}&intolerances=${intolerancesSelect.value}&number=15&apiKey=${apiReciKey}`;
 
 var recipeButton = document.getElementById("randRecipes");
 var recipeSection = document.querySelector(".unhideRecipeInfo");
@@ -100,15 +100,14 @@ recipeButton.addEventListener("click", function () {
     .then((data) => {
       console.log(data.results[0].title);
       recipeTitle.textContent = data.results[0].title;
-      // unhide info
-      recipeTitle.classList.remove(".unhideRecipeInfo"); // Remove the old class, if necessary
-      recipeTitle.classList.add(".showRecipeInfo"); // Add the new class
-      (".showRecipeInfo");
+      // Change Title class to make visible
+      recipeTitle.classList.remove(".unhideRecipeInfo");
+      recipeTitle.classList.add(".showRecipeInfo");
+      // Update Image and change class to make visible
       recipeImage.src = data.results[0].image;
       recipeSection.style.display = "block";
-      // unhide info
-      recipeImage.classList.remove(".unhideRecipeInfo"); // Remove the old class, if necessary
-      recipeImage.classList.add(".showRecipeInfo"); // Add the new class
+      recipeImage.classList.remove(".unhideRecipeInfo"); 
+      recipeImage.classList.add(".showRecipeInfo"); 
     })
     .catch((error) => {
       console.error("Recipe Error:", error.message);
