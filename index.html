@@ -46,45 +46,47 @@
 
         <h1>Let's Workout!</h1>
 
-        <form id="workoutForm" action="#">
-          <label for="bodyPart">Body Parts</label>
-          <select name="bodyPart" id="bodyPart">
-            <optgroup label="Upper Body">
-              <option>Shoulders</option>
-              <option>Upper Arm</option>
-              <option>Back</option>
-              <option selected="selected">Chest</option>
-              <option>Lower Arm</option>
-              <option>Upper Arm</option>
-            <optgroup label="lower Body">
-              <option>Lower Leg</option>
-              <option>Upper leg</option>
-            <optgroup label="Core">
-              <option>Waist</option>
-              <option>Cardio</option>
-          </select>
-          <br>
+        
+      <form id="workoutForm" action="#">
+        <label for="bodyPart">Body Parts</label>
+        <select name="bodyPart" id="bodyPart">
+        <optgroup label="Upper Body">
+        <option>Shoulders</option>
+        <option>Upper Arm</option>
+        <option>Back</option>
+        <option selected="selected">Chest</option>
+        <option >Lower Arm</option>
+        <option>Upper Arm</option>
+        <optgroup label="lower Body">
+        <option>Lower Leg</option>
+        <option>Upper leg</option>
+         <optgroup label="Core">
+       <option>Waist</option>
+        <option>Cardio</option>
+        </select>
+        <br>
+        
+        <label for="equipment">equipment</label>
+        <select name="equipment" id="equipment">
+          <optgroup label="Bulking">
+            <option >barbell</option>
+            <option >rope</option>
+            <option >body-weight</option>
+            <option >assisted</option>
+          </optgroup>
+          <optgroup label="Cardio">
+            <option value="somefile">cable</option>
+            <option value="someotherfile">leverage machine</option>
+            <option >stability ball</option>
+          </optgroup>
+        </select>
+        <br>
+        <div class="widget" id="randWrkOuts">
 
-          <label for="equipment">equipment</label>
-          <select name="equipment" id="equipment">
-            <optgroup label="Bulking">
-              <option>barbell</option>
-              <option>rope</option>
-              <option>body-weight</option>
-              <option>assisted</option>
-            </optgroup>
-            <optgroup label="Cardio">
-              <option value="somefile">cable</option>
-              <option value="someotherfile">leverage machine</option>
-              <option>stability ball</option>
-            </optgroup>
-          </select>
-          <br>
-          <div class="widget" id="randWrkOuts">
-
-            <button type="submit">Get my workout!</button>
-
-          </div>
+          <button type="submit">Get my workout!</button>
+          <section id="workoutResults"></section>
+        </div>
+        
         </form>
       </div>
       <!-- ---------END WORKOUT SECTION-------------- -->

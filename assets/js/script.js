@@ -21,6 +21,8 @@ var equipment = [
   "stability ball",
 ];
 
+let randomwrkout = [];
+
 // var difficulty = [
 // "beginner",
 // "intermediate",
@@ -30,10 +32,11 @@ var equipment = [
 const apiKey = "b5a440c4d4msh54112a87c5e9245p18176fjsnfa9cc2dad087";
 const options = {
   headers: {
-    "X-RapidAPI-Key": "b5a440c4d4msh54112a87c5e9245p18176fjsnfa9cc2dad087",
+    "X-RapidAPI-Key": "a410389ea3msha482df8372ade2bp19d872jsn0909b3343fdd",
     "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
   },
-};
+}; 
+
 document
   .querySelector("#workoutForm")
   .addEventListener("submit", function (sub) {
@@ -55,15 +58,25 @@ function getWorkout(bodyP, equip) {
       console.log(data);
       for (var i = 0; i < data.length; i++) {
         if (data[i].equipment === equip) {
-          // other stuff to do
-          /* 
-            store values in an array
-            pick random value from that array
-            display random value to user
-          */
-          console.log(data[i]);
+          randomwrkout.push(data[i]);
         }
       }
+      let index = Math.floor(Math.random() * randomwrkout.length);
+      console.log(randomwrkout[index]);
+      let workoutR = document.getElementById("workoutResults");
+      let check = document.getElementById("wrkoutContainer");
+      console.log(check);
+      if (check !== null) {
+        check.remove();
+      }
+      let wrkoutContainer = document.createElement("div");
+      let wrkoutName = document.createElement("h1");
+      wrkoutContainer.setAttribute("id", "wrkoutContainer");
+      wrkoutName.textContent = randomwrkout[index].name;
+
+      wrkoutContainer.append(wrkoutName);
+      workoutR.append(wrkoutContainer);
+
       // renderItems(name, data);
       // renderItems(gifUrl, data),
       //   (document.getElementById("workout").textContent = workout);
