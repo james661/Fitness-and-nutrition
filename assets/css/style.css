@@ -16,6 +16,17 @@ body {
   background-color: var(--leaf);
   color: var(--spinach);
   height: 120px;
+  
+}
+.header-h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+  top: -10px;
+  margin: 10px;
+    color: var(--spinach);
+
 }
 
 /* Applies to entire nav container */

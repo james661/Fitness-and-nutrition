@@ -29,6 +29,7 @@
       <a class="nav" href="#Placeholder">Placeholder</a>
     </nav>
   </header>
+    <h1 class="header-h1">Fit - N - Fresh</h1>
 
 
   <!--  -->
@@ -45,48 +46,49 @@
       <div class="workoutsection">
 
         <h1>Let's Workout!</h1>
-
-        
-      <form id="workoutForm" action="#">
-        <label for="bodyPart">Body Parts</label>
-        <select name="bodyPart" id="bodyPart">
-        <optgroup label="Upper Body">
-        <option>Shoulders</option>
-        <option>Upper Arm</option>
-        <option>Back</option>
-        <option selected="selected">Chest</option>
-        <option >Lower Arm</option>
-        <option>Upper Arm</option>
-        <optgroup label="lower Body">
-        <option>Lower Leg</option>
-        <option>Upper leg</option>
-         <optgroup label="Core">
-       <option>Waist</option>
-        <option>Cardio</option>
-        </select>
         <br>
-        
-        <label for="equipment">equipment</label>
-        <select name="equipment" id="equipment">
-          <optgroup label="Bulking">
-            <option >barbell</option>
-            <option >rope</option>
-            <option >body-weight</option>
-            <option >assisted</option>
-          </optgroup>
-          <optgroup label="Cardio">
-            <option value="somefile">cable</option>
-            <option value="someotherfile">leverage machine</option>
-            <option >stability ball</option>
-          </optgroup>
-        </select>
-        <br>
-        <div class="widget" id="randWrkOuts">
+        <section id="workoutResults"></section>
 
-          <button type="submit">Get my workout!</button>
-          <section id="workoutResults"></section>
-        </div>
-        
+
+        <form id="workoutForm" action="#">
+          <label for="bodyPart">Body Parts</label>
+          <select name="bodyPart" id="bodyPart">
+            <optgroup label="Upper Body">
+              <option>Shoulders</option>
+              <option>Upper Arm</option>
+              <option>Back</option>
+              <option selected="selected">Chest</option>
+              <option>Lower Arm</option>
+              <option>Upper Arm</option>
+            <optgroup label="lower Body">
+              <option>Lower Leg</option>
+              <option>Upper leg</option>
+            <optgroup label="Core">
+              <option>Waist</option>
+              <option>Cardio</option>
+          </select>
+          <br>
+
+          <label for="equipment">equipment</label>
+          <select name="equipment" id="equipment">
+            <optgroup label="Bulking">
+              <option>barbell</option>
+              <option>rope</option>
+              <option>body-weight</option>
+              <option>assisted</option>
+            </optgroup>
+            <optgroup label="Cardio">
+              <option value="somefile">cable</option>
+              <option value="someotherfile">leverage machine</option>
+              <option>stability ball</option>
+            </optgroup>
+          </select>
+          <br>
+          <div class="widget" id="randWrkOuts">
+
+            <button type="submit">Get my workout!</button>
+          </div>
+
         </form>
       </div>
       <!-- ---------END WORKOUT SECTION-------------- -->
@@ -96,6 +98,10 @@
       <div class="recipesection">
 
         <h1>Choose Your Recipe</h1>
+        <div class="unhideRecipeInfo">
+          <h2 id="recipeTitle"></h2>
+          <img id="recipeImage" src="" alt="Recipe Image">
+        </div>
         <form id="Food" action="#">
           <label for="cuisine">Cuisine</label>
           <select name="cuisine" id="cuisine">
@@ -137,10 +143,7 @@
         </div>
 
         <!-- Will show / hide recipe section -->
-        <div class="unhideRecipeInfo">
-          <h2 id="recipeTitle"></h2>
-          <img id="recipeImage" src="" alt="Recipe Image">
-        </div>
+
       </div>
       <br>
       <!-- ---------------------END RECIPE SECTION ---------------- -->
