@@ -5,17 +5,20 @@
   --guava: #4e878c;
   --spinach: #00241b;
 }
-
-main {
+/* Applies to entire main section */
+body {
   /* background: linear-gradient(to bottom, #b5ffe1, #4e878c); */
-  background-color: var(--lettuce);
+  background-color: var(--guava);
 }
+
+/* Applies to header color and size */
 .header {
   background-color: var(--leaf);
   color: var(--spinach);
-  height: 100px;
+  height: 120px;
 }
 
+/* Applies to entire nav container */
 .nav-container {
   display: flex;
   flex-direction: row;
@@ -25,14 +28,19 @@ main {
   margin: 10px;
 }
 
+/* Applies to nav bar items */
 .nav {
   color: var(--guava);
   margin: 5px;
+  font-size: 1.3em;
 }
 
+/* Applies to logo in top left  */
 #logo {
-  width: 150px;
+  width: 190px;
 }
+
+/* Applies to buttons */
 
 button {
   background-color: var(--guava);
@@ -47,11 +55,12 @@ button:hover {
   color: var(--spinach);
 }
 
+/* Applies to workout card */
 .workoutsection {
   background: linear-gradient(to bottom, #b5ffe1, #65b891);
-  border: solid 4px var(--guava);
+  border: solid 2px var(--grass);
   color: var(--spinach);
-  margin-top: 30px;
+  margin-top: 10px;
   margin-right: 10px;
   margin-left: 10px;
   width: 50%;
@@ -61,11 +70,20 @@ button:hover {
   align-items: center;
 }
 
+/* Applies to dropdowns in the workout and recipe boxes */
+form {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Applies to recipe card */
 .recipesection {
   background: linear-gradient(to bottom, #b5ffe1, #65b891);
-  border: solid 4px var(--guava);
+  border: solid 2px var(--grass);
   color: var(--spinach);
-  margin-top: 30px;
+  margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
   width: 50%;
@@ -74,32 +92,29 @@ button:hover {
   flex-direction: column;
   align-items: center;
 }
-
+/* Applies to both cards */
 .workoutandrecipecards {
   display: flex;
   flex-direction: row;
 }
 
+/* Applies to motivational quotes */
 .motivQuotes {
-  color: var(--spinach);
+  text-align: center;
+  color: var(--guava);
   background: linear-gradient(to bottom, #b5ffe1, #65b891);
-  border: solid 4px var(--guava);
+  border: solid 2px var(--grass);
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: 10px;
   margin-right: 10px;
-  padding: 20px;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.motivQuotes h2 {
-  text-align: center;
-}
-
-
-
+/* Applies to footer */
 footer {
   display: flex;
   justify-content: center;

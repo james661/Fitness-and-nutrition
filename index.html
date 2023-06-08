@@ -23,9 +23,9 @@
     <img id="logo" src="./assets/images/Fit n Fresh Logo.png" alt="fit-N-fresh logo">
     <nav class="nav-container">
       <a class="nav" href="#Workouts">Workouts</a>
-      <br>
+
       <a class="nav" href="#Recipes">Recipes</a>
-      <br>
+
       <a class="nav" href="#Placeholder">Placeholder</a>
     </nav>
   </header>
@@ -33,69 +33,65 @@
 
   <!--  -->
   <main>
+<!-- ------First Quote Section --------------- -->
+        <div class="motivQuotes">
+          <h3>“Some things you have to do every day. Eating seven apples on Saturday night instead of one a day just isn’t going
+            to
+            get the job done.” – Jim Rohn</h3>
+        </div>
     <section class="workoutandrecipecards">
       <!-- ----------WORKOUT SECTION------------- -->
       <div class="workoutsection">
-        <h1>Choose Your Workout</h1>
-        <p></p>
-        <h1></h1>
 
-
-
-      <form action="#">
+        <h1>Let's Workout!</h1>
+        
+      <form id="workoutForm" action="#">
         <label for="bodyPart">Body Parts</label>
         <select name="bodyPart" id="bodyPart">
-        <option name="bodyPart" id="bodyPart">
+        <optgroup label="Upper Body">
+        <option>Shoulders</option>
+        <option>Upper Arm</option>
         <option>Back</option>
-        <option>Chest</option>
-        <option selected="selected">Lower Arm</option>
+        <option selected="selected">Chest</option>
+        <option >Lower Arm</option>
+        <option>Upper Arm</option>
+        <optgroup label="lower Body">
         <option>Lower Leg</option>
-        <option>Faster</option>
+        <option>Upper leg</option>
+         <optgroup label="Core">
+       <option>Waist</option>
+        <option>Cardio</option>
         </select>
-
-        <label for="files">Type</label>
-        <select name="files" id="files">
+        <br>
+        
+        <label for="equipment">equipment</label>
+        <select name="equipment" id="equipment">
           <optgroup label="Bulking">
-            <option >powerlifting</option>
-            <option >Strongman</option>
-            <option >Strength</option>
-            <option value="jqueryui">Olympic weightlifting</option>
+            <option >barbell</option>
+            <option >rope</option>
+            <option >body-weight</option>
+            <option >assisted</option>
           </optgroup>
           <optgroup label="Cardio">
-            <option value="somefile">Cardio</option>
-            <option value="someotherfile">Stretching</option>
+            <option value="somefile">cable</option>
+            <option value="someotherfile">leverage machine</option>
+            <option >stability ball</option>
           </optgroup>
         </select>
-
-          <label for="number">Difficulty</label>
-          <select name="number" id="number">
-            <option>beginner</option>
-            <option selected="selected">intermediate</option>
-            <option>Expert</option>
-          </select>
-
-
-        </form>
-        
-
-        <!-- <script>
-        $( function() {
-          $( ".widget input[type=submit], .widget a, .widget button" ).button();
-          $( "button, input, a" ).on( "click", function( event ) {
-            event.preventDefault();
-          } );
-        } );
-      </script> -->
-
+        <br>
         <div class="widget" id="randWrkOuts">
-          <button>Get my workout!</button>
+
+          <button type="submit">Get my workout!</button>
+
         </div>
+        </form>
       </div>
       <!-- ---------END WORKOUT SECTION-------------- -->
 
       <!-- ---------------------BEGIN RECIPE SECTION ---------------- -->
 
       <div class="recipesection">
+
         <h1>Choose Your Recipe</h1>
   <form id="Food" action="#">
       <label for="cuisine">Cuisine</label>
@@ -107,7 +103,8 @@
         <option>Indian</option>
         <option>Chinese</option>
       </select>
-
+      <br>
+    
       <label for="Intol">Intolerances</label>
       <select name="files" id="files">
           <option>Gluten</option>
@@ -116,7 +113,9 @@
           <option>Seafood</option>
           <option>Shellfish</option>
           <option>Sesame</option>
+
       </select>
+      <br>
 
       <label for="diet">Diet</label>
       <select name="diet" id="diet">
@@ -125,24 +124,25 @@
         <option>Pescetarian</option>
         <option>Vegan</option>
       </select>
-
+      <br>
 
 </form>
 
+
         <div class="widget" id="randRecipes">
-          <button>Get my recipe!</button>
+          <button>Grab my Recipe!</button>
         </div>
       </div>
       <br>
       <!-- ---------------------END RECIPE SECTION ---------------- -->
     </section>
-    <!-- ----------BEGIN MOTIVATIONAL QUOTE SECTION--------------- -->
+    <!-- ----------SECOND MOTIVATIONAL QUOTE SECTION--------------- -->
     <div class="motivQuotes">
-      <h2>"If we could give every individual the right amount of nourishment and exercise, not too little and not too much, we would have the safest way to health." - Hippocrates.</h2>
-      <h1>Motivational Quote</h1>
+      <h3>"If we could give every individual the right amount of nourishment and exercise, not too little and not too
+        much, we would have the safest way to health." - Hippocrates.</h3>
     </div>
     <footer>
-      <h4>You Only Live Once - Don't F it Up &#x1F4AA; &#x1F966;</h4>
+      <h3>You Only Live Once - Don't F it Up &#x1F4AA; &#x1F966;</h3>
     </footer>
   </main>
 
