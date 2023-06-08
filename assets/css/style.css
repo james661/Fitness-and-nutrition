@@ -123,3 +123,11 @@ footer {
   padding: 15px;
   color: var(--guava);
 }
+
+.unhideRecipeInfo {
+  display: none;
+}
+
+.showRecipeInfo {
+  display: block;
+}
