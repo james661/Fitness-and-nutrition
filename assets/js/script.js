@@ -61,7 +61,13 @@ let index = Math.floor(Math.random() * randomwrkout.length);
 var dietSelect = document.getElementById("diet");
 var cuisineSelect = document.getElementById("cuisine");
 var intolerancesSelect = document.getElementById("intolerances");
-var apiReciKey = "15078b5e06594cb3ab818e08ec72e030";
+
+//Earnest apiKey: 15078b5e06594cb3ab818e08ec72e030
+// Jose apiKey: 43050d7446924af49c324ae43ecfbafa
+var apiReciKey = "4c1850eb22000d948347395ddcfbf45dfaef73ec";
+var RecipeEndpoint = `https://api.spoonacular.com/recipes/complexSearch?diet=${dietSelect.value}&cuisine=${cuisineSelect.value}&intolerances=${intolerancesSelect.value}&number=15&apiKey=${apiReciKey}`;
+
+var apiReciKey = "4c1850eb22000d948347395ddcfbf45dfaef73ec";
 var recipeButton = document.getElementById("randRecipes");
 var recipeSection = document.querySelector(".unhideRecipeInfo");
 var recipeTitle = document.getElementById("recipeTitle");
@@ -85,6 +91,8 @@ recipeButton.addEventListener("click", function () {
       // Update Image and change class to make visible
       recipeImage.src = data.results[0].image;
       recipeSection.style.display = "block";
+      recipeImage.classList.remove(".unhideRecipeInfo");
+      recipeImage.classList.add(".showRecipeInfo");
       var singleRecipeURL = `https://api.spoonacular.com/recipes/${data.results[0].id}/information?apiKey=${apiReciKey}`;
       fetch(singleRecipeURL)
         .then((response) => {
@@ -102,26 +110,13 @@ recipeButton.addEventListener("click", function () {
             ingredientItem.textContent = ingredientsArr[i].original;
             ingredients.appendChild(ingredientItem);
           }
-          // --------------------- We know this is a lil ug, but it works and removes the splits that the API gifted us ------------------------------
-          var splitInst = data.instructions.split("<ol>");
-          var joinedInst1 = splitInst.join("");
-          var splitInst2 = joinedInst1.split("</ol>");
-          var joinedInst2 = splitInst2.join("");
-          var splitInst3 = joinedInst2.split("<li>");
-          var joinedInst3 = splitInst3.join("");
-          var splitInst4 = joinedInst3.split("</li>");
-          var joinedInst4 = splitInst4.join("");
-          var splitInst5 = joinedInst4.split("<span>");
-          var joinedInst5 = splitInst5.join("");
-          var splitInst6 = joinedInst5.split("</span>");
-          var joinedInst6 = splitInst6.join("");
-          console.log(joinedInst6);
-          // Update Image and change class to make visible
-          instructions.textContent = joinedInst6;
+          // --------------------- Displays HTML from API ------------------------------
+          instructions.innerHTML = data.instructions;
           recipeSection.style.display = "block";
         });
     })
     .catch((error) => {
       console.error("Recipe Error:", error.message);
     });
+  console.log(dietSelect.value);
 });
