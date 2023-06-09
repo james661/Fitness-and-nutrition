@@ -16,17 +16,20 @@ body {
   background-color: var(--leaf);
   color: var(--spinach);
   height: 120px;
-  
+  border: solid 2px var(--spinach);
+  margin-left: 10px;
+  margin-right: 10px;
 }
-.header-h1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  position: relative;
-  top: -10px;
-  margin: 10px;
-    color: var(--spinach);
 
+#FitNFreshIntro {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around; */
+  position: relative;
+  top: -80px;
+  left: 180px;
+  margin: 0px;
+  color: var(--guava);
 }
 
 /* Applies to entire nav container */
@@ -35,7 +38,7 @@ body {
   flex-direction: row;
   justify-content: end;
   position: relative;
-  top: -50px;
+  top: -100px;
   margin: 10px;
 }
 
@@ -69,7 +72,7 @@ button:hover {
 /* Applies to workout card */
 .workoutsection {
   background: linear-gradient(to bottom, #b5ffe1, #65b891);
-  border: solid 2px var(--grass);
+  border: solid 2px var(--spinach);
   color: var(--spinach);
   margin-top: 10px;
   margin-right: 10px;
@@ -92,7 +95,7 @@ form {
 /* Applies to recipe card */
 .recipesection {
   background: linear-gradient(to bottom, #b5ffe1, #65b891);
-  border: solid 2px var(--grass);
+  border: solid 2px var(--spinach);
   color: var(--spinach);
   margin-top: 10px;
   margin-left: 10px;
@@ -112,9 +115,9 @@ form {
 /* Applies to motivational quotes */
 .motivQuotes {
   text-align: center;
-  color: var(--guava);
-  background: linear-gradient(to bottom, #b5ffe1, #65b891);
-  border: solid 2px var(--grass);
+  color: var(--spinach);
+  background-color: var(--grass);
+  border: solid 2px var(--spinach);
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: 10px;
@@ -123,6 +126,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 25px;
 }
 
 /* Applies to footer */
@@ -132,7 +136,10 @@ footer {
   align-items: center;
   background-color: var(--leaf);
   padding: 15px;
-  color: var(--guava);
+  color: var(--spinach);
+  border: solid 2px var(--spinach);
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .unhideRecipeInfo {
@@ -141,4 +148,37 @@ footer {
 
 .showRecipeInfo {
   display: block;
+}
+
+#workout {
+  background-color: #00241b;
+  color: #65b891;
+}
+
+#recipeCard {
+  background-color: #00241b;
+  color: #65b891;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding: 15px;
+  margin: 25px;
+  border: solid 3px var(--guava);
+  
+}
+
+#workoutResults {
+  background-color: #00241b;
+  color: #65b891;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding: 15px;
+  margin: 25px;
+  border: solid 3px var(--guava);
+  
 }

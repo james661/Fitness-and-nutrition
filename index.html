@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,30 +13,34 @@
   <!-- Style CSS -->
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
+
 <body>
   <!--  ---------------Header and Nav bar -------- -->
   <header class="header">
     <img id="logo" src="./assets/images/Fit n Fresh Logo.png" alt="fit-N-fresh logo">
+    <h1 id="FitNFreshIntro">Fit -N- Fresh</h1>
     <nav class="nav-container">
       <a class="nav" href="#Workouts">Workouts</a>
       <a class="nav" href="#Recipes">Recipes</a>
       <a class="nav" href="#Placeholder">Placeholder</a>
     </nav>
   </header>
-    <h1 class="header-h1">Fit - N - Fresh</h1>
   <!--  -->
   <main>
     <!-- ------First Quote Section --------------- -->
     <div class="motivQuotes">
-      <h3>“Some things you have to do every day. Eating seven apples on Saturday night instead of one a day just isn’t
-        going
-        to
-        get the job done.” – Jim Rohn</h3>
+      <h3>Sometimes being physically active can be boring, not to mention, the last thing you want to do at the end of a
+        long day.
+        On top of that, it’s tough to know exactly how to fuel your body for specific activities.</h3>
+      <h3>Our application, Fit -N- Fresh solves these problems by guiding users to 6.5 million amazing pairings of both
+        activities
+        and fuel, to ensure that our bodies - our one and only life vessel - are as happy and healthy as they can be.
+      </h3>
     </div>
     <section class="workoutandrecipecards">
       <!-- ----------WORKOUT SECTION------------- -->
       <div class="workoutsection">
-        <h1>Let's Workout!</h1>
+        <h1>Let's Workout:</h1>
         <br>
         <section id="workoutResults"></section>
         <form id="workoutForm" action="#">
@@ -76,18 +81,20 @@
           </div>
         </form>
       </div>
-    <!-- ---------END WORKOUT SECTION-------------- -->
-    
-<!-- ---------------------BEGIN RECIPE SECTION ---------------- -->
-    <div class="recipesection recipeCard">
-      <!-- Will show / hide recipe section -->
-      <div class="unhideRecipeInfo">
-        <h2 id="recipeTitle"></h2>
-        <img id="recipeImage" src="" alt="Recipe Image">
-        <ul id="ingredients"></ul>
-        <h3 id="instructions"></h3>
-      </div>
-      <h1>Choose Your Recipe</h1>
+      <!-- ---------END WORKOUT SECTION-------------- -->
+
+      <!-- ---------------------BEGIN RECIPE SECTION ---------------- -->
+      <div class="recipesection">
+        <!-- Will show / hide recipe section -->
+        <div class="unhideRecipeInfo">
+          <span id="recipeCard">
+            <h2 id="recipeTitle"></h2>
+            <img id="recipeImage" src="" alt="Recipe Image">
+            <ul id="ingredients"></ul>
+            <h4 id="instructions"></h4>
+          </span>
+        </div>
+        <h1>Let's Eat:</h1>
         <form id="Food" action="#">
           <label for="cuisine">Cuisine</label>
           <select name="cuisine" id="cuisine">
@@ -142,4 +149,5 @@
   <!-- Script.JS -->
   <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
