@@ -164,6 +164,7 @@ footer {
   align-content: center;
   justify-content: center;
   padding: 15px;
+  margin: 25px;
   border: solid 3px var(--guava);
   
 }
