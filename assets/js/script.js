@@ -1,4 +1,5 @@
 let randomwrkout = [];
+
 const apiKey = "b5a440c4d4msh54112a87c5e9245p18176fjsnfa9cc2dad087";
 const options = {
   headers: {
@@ -22,11 +23,8 @@ function getWorkout(bodyP, equip) {
       console.log(data);
       for (var i = 0; i < data.length; i++) {
         if (data[i].equipment === equip) {
-          randomwrkout.push(data[i]);
-        }
-      }
-      let index = Math.floor(Math.random() * randomwrkout.length);
-      console.log(randomwrkout[index]);
+          // randomwrkout.push(data[i]);
+      // console.log(randomwrkout[index]);
       let workoutR = document.getElementById("workoutResults");
       let check = document.getElementById("wrkoutContainer");
       console.log(check);
@@ -36,15 +34,23 @@ function getWorkout(bodyP, equip) {
       let wrkoutContainer = document.createElement("div");
       let wrkoutName = document.createElement("h1");
       wrkoutContainer.setAttribute("id", "wrkoutContainer");
-      wrkoutName.textContent = randomwrkout[index].name;
-      let wrkoutGif = document.createElement("h2");
+      wrkoutName.textContent = data[i].name;
       var img = document.createElement("img");
-      img.src = randomwrkout[index].gifUrl;
+      img.src = data[i].gifUrl;
       img.alt = "Exercise GIF";
-      wrkoutContainer.append(wrkoutGif);
-      wrkoutGif.append(img);
+      wrkoutContainer.append(img);
       wrkoutContainer.append(wrkoutName);
       workoutR.append(wrkoutContainer);
+      let wrkoutError = document.createElement("h1")        }
+      if (data[i] = null) {
+        wrkoutError.textContent =
+          "Undefined: Choose a different combination";
+        wrkoutContainer.append(wrkoutError);
+        
+      }}
+let index = Math.floor(Math.random() * randomwrkout.length);
+
+
     })
     .catch((error) => {
       console.error(error);
@@ -67,14 +73,14 @@ recipeButton.addEventListener("click", function () {
   var recipeEndpoint = `https://api.spoonacular.com/recipes/complexSearch?diet=${dietSelect.value}&cuisine=${cuisineSelect.value}&intolerances=${intolerancesSelect.value}&number=1&apiKey=${apiReciKey}`;
   fetch(recipeEndpoint)
     .then((response) => {
-      console.log("This recipe API works!");
+      // console.log("This recipe API works!");
       if (!response.ok) {
         throw new Error(`Error: ${response.status}`);
       }
       return response.json();
     })
     .then((data) => {
-      console.log(data.results[0]);
+      // console.log(data.results[0]);
       recipeTitle.textContent = data.results[0].title;
       // Update Image and change class to make visible
       recipeImage.src = data.results[0].image;
@@ -82,14 +88,14 @@ recipeButton.addEventListener("click", function () {
       var singleRecipeURL = `https://api.spoonacular.com/recipes/${data.results[0].id}/information?apiKey=${apiReciKey}`;
       fetch(singleRecipeURL)
         .then((response) => {
-          console.log("This single recipe API works!");
+          // console.log("This single recipe API works!");
           if (!response.ok) {
             throw new Error(`Error: ${response.status}`);
           }
           return response.json();
         })
         .then((data) => {
-          console.log(data);
+          // console.log(data);
           var ingredientsArr = data.extendedIngredients;
           for (var i = 0; i < ingredientsArr.length; i++) {
             var ingredientItem = document.createElement("li");
