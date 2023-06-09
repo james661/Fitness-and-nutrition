@@ -47,33 +47,66 @@
           <label for="bodyPart">Body Parts</label>
           <select name="bodyPart" id="bodyPart">
             <optgroup label="Upper Body">
-              <option>Shoulders</option>
-              <option>Upper Arm</option>
-              <option>Back</option>
-              <option selected="selected">Chest</option>
-              <option>Lower Arm</option>
-              <option>Upper Arm</option>
+              <option value="neck">neck</option>
+              <option value="shoulders">Shoulders</option>
+              <option value="upper arms">Upper Arm</option>
+              <option value="back">Back</option>
+              <option selected="chest">Chest</option>
+              <option value="lower arms">Lower Arm</option>
+              <option value="upper arms">Upper Arm</option>
             <optgroup label="lower Body">
-              <option>Lower Leg</option>
-              <option>Upper leg</option>
+              <option value="lower legs">Lower Leg</option>
+              <option value="upper legs">Upper leg</option>
             <optgroup label="Core">
-              <option>Waist</option>
-              <option>Cardio</option>
+              <option value="waist">Waist</option>
+              <option value="cardio">Cardio</option>
+              </optgroup>
           </select>
           <br>
+
           <label for="equipment">equipment</label>
           <select name="equipment" id="equipment">
+
             <optgroup label="Bulking">
-              <option>barbell</option>
-              <option>rope</option>
-              <option>body-weight</option>
-              <option>assisted</option>
+              <option value="barbell">barbell</option>
+              <option value="leverage machine">Leverage Machine</option>
+              <option value="dumbbell">dumbbell</option>
+              <option value="ez barbell">ez barbell</option>
+              <option value="olympic barbell">olympic barbell</option>
+              <option value="skierg machine">skierg machine</option>
+              <option value="sled machine">sled machine</option>
+              <option value="stability ball">stability ball</option>
+              <option value="trap bar">trap bar</option>
+              <option value="upper body ergometer">upper body ergometer</option>
+              <option value="cable">cable</option>
             </optgroup>
+
+            <optgroup label="H.I.T">
+              <option value="kettlebell">kettlebell</option>
+              <option value="weighted">weighted</option>
+              <option value="bosu ball">bosu ball</option>
+              <option value="hammer">hammer</option>
+              <option value="rope">rope</option>
+              <option value="medicine ball">medicine ball</option>
+              <option value="band">band</option>
+              <option value="wheel roller">wheel roller</option>
+              <option value="resistance band">resistance band</option>
+              <option value="stability ball">Stability Ball</option>
+              <option value="tire">tire</option>
+            </optgroup>
+
             <optgroup label="Cardio">
-              <option value="somefile">cable</option>
-              <option value="someotherfile">leverage machine</option>
-              <option>stability ball</option>
+              <option value="stationary bike">stationary bike</option>
+              <option value="stepmill machine">stepmill machine</option>
+              <option value="body weight">Body Weight</option>
+              <option value="elliptical machine">elliptical machine</option>
             </optgroup>
+
+            <optgroup label="stretching">
+              <option value="roller">roller</option>
+
+            </optgroup>
+
           </select>
           <br>
           <div class="widget" id="randWrkOuts">
