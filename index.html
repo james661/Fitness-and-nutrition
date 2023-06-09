@@ -82,20 +82,28 @@
         </select>
         <br>
         <div class="widget" id="randWrkOuts">
-
+          
           <button type="submit">Get my workout!</button>
           <section id="workoutResults"></section>
         </div>
         
-        </form>
+      </form>
+    </div>
+    <!-- ---------END WORKOUT SECTION-------------- -->
+    
+    <!-- ---------------------BEGIN RECIPE SECTION ---------------- -->
+    
+    <div class="recipesection">
+      
+      <!-- Will show / hide recipe section -->
+      <div class="unhideRecipeInfo">
+        <h2 id="recipeTitle"></h2>
+        <img id="recipeImage" src="" alt="Recipe Image">
+        <ul id="ingredients"></ul>
+        <h3 id="instructions"></h3>
       </div>
-      <!-- ---------END WORKOUT SECTION-------------- -->
-
-      <!-- ---------------------BEGIN RECIPE SECTION ---------------- -->
-
-      <div class="recipesection">
-
-        <h1>Choose Your Recipe</h1>
+      
+      <h1>Choose Your Recipe</h1>
         <form id="Food" action="#">
           <label for="cuisine">Cuisine</label>
           <select name="cuisine" id="cuisine">
@@ -136,13 +144,6 @@
           <button>Grab my Recipe!</button>
         </div>
 
-        <!-- Will show / hide recipe section -->
-        <div class="unhideRecipeInfo">
-          <h2 id="recipeTitle"></h2>
-          <img id="recipeImage" src="" alt="Recipe Image">
-          <ul id="ingredients"></ul>
-          <h3 id="instructions"></h3>
-        </div>
       </div>
       <br>
       <!-- ---------------------END RECIPE SECTION ---------------- -->
