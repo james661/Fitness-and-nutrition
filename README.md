@@ -13,7 +13,7 @@ N/A
 
 ## Usage
 
-The access Fit -N- Fresh, head to the following URL: 
+The access Fit -N- Fresh, head to the following URL: https://james661.github.io/Fitness-and-nutrition/
 
 ![Alt Text](./assets/images/FitNFreshAppScreenshot.png)
 
