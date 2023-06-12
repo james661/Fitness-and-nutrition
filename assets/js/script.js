@@ -1,5 +1,5 @@
+// Creates an empty array for the random workouts
 let randomwrkout = [];
-
 const apiKey = "b5a440c4d4msh54112a87c5e9245p18176fjsnfa9cc2dad087";
 const options = {
   headers: {
@@ -7,6 +7,13 @@ const options = {
     "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
   },
 };
+// Creates a variable for the previous 2 workouts that are stored locally.
+let previousWorkouts = localStorage.getItem("previousSearchedWorkouts");
+if (previousWorkouts) {
+  randomwrkout = JSON.parse(previousWorkouts);
+  displayWorkouts(randomwrkout);
+}
+
 document
   .querySelector("#workoutForm")
   .addEventListener("submit", function (sub) {
@@ -15,47 +22,72 @@ document
     let equip = document.getElementById("equipment").value.toLowerCase();
     getWorkout(bodyP, equip);
   });
+
 function getWorkout(bodyP, equip) {
   const url = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyP}`;
-  var gifUrl = fetch(url, options)
+  fetch(url, options)
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      for (var i = 0; i < data.length; i++) {
-        if (data[i].equipment === equip) {
-          // randomwrkout.push(data[i]);
-      // console.log(randomwrkout[index]);
-      let workoutR = document.getElementById("workoutResults");
-      let check = document.getElementById("wrkoutContainer");
-      console.log(check);
-      if (check !== null) {
-        check.remove();
+      let filteredWorkouts = data.filter(
+        (workout) => workout.equipment === equip
+      );
+      if (filteredWorkouts.length > 0) {
+        let randomIndex = Math.floor(Math.random() * filteredWorkouts.length);
+        let randomWorkout = filteredWorkouts[randomIndex];
+        randomwrkout.push(randomWorkout);
+
+        // Limit to 2 workouts stored
+        if (randomwrkout.length > 2) {
+          randomwrkout.shift(); // Remove the oldest workout
+        }
+
+        displayWorkouts(randomwrkout);
+
+        // Store the most recent search in local storage
+        localStorage.setItem(
+          "previousSearchedWorkouts",
+          JSON.stringify(randomwrkout)
+        );
+      } else {
+        console.log("No matching workouts found");
       }
-      let wrkoutContainer = document.createElement("div");
-      let wrkoutName = document.createElement("h1");
-      wrkoutContainer.setAttribute("id", "wrkoutContainer");
-      wrkoutName.textContent = data[i].name;
-      var img = document.createElement("img");
-      img.src = data[i].gifUrl;
-      img.alt = "Exercise GIF";
-      wrkoutContainer.append(img);
-      wrkoutContainer.append(wrkoutName);
-      workoutR.append(wrkoutContainer);
-      let wrkoutError = document.createElement("h1")        }
-      if (data[i] = null) {
-        wrkoutError.textContent =
-          "Undefined: Choose a different combination";
-        wrkoutContainer.append(wrkoutError);
-        
-      }}
-let index = Math.floor(Math.random() * randomwrkout.length);
-
-
     })
     .catch((error) => {
       console.error(error);
     });
 }
+
+function displayWorkouts(workouts) {
+  let workoutR = document.getElementById("workoutResults");
+  let previousContainer = document.getElementById("previousWorkouts");
+
+  // Removes the old workout search
+  if (previousContainer) {
+    previousContainer.remove();
+  }
+
+  // Make the container for the previous workout
+  let previousWorkoutsContainer = document.createElement("div");
+  previousWorkoutsContainer.setAttribute("id", "previousWorkouts");
+
+  // Display The most recent workout
+  workouts.forEach((workout) => {
+    let wrkoutContainer = document.createElement("div");
+    let wrkoutName = document.createElement("h1");
+    wrkoutName.textContent = workout.name;
+    var img = document.createElement("img");
+    img.src = workout.gifUrl;
+    img.alt = "Exercise GIF";
+    wrkoutContainer.append(img);
+    wrkoutContainer.append(wrkoutName);
+    previousWorkoutsContainer.append(wrkoutContainer);
+  });
+
+  // Append previous workouts container to the results
+  workoutR.append(previousWorkoutsContainer);
+}
+
 // --------------END WORKOUT SECTION------------------------------------
 // --------------EVERYTHING BELOW IS RECIPE BASED------------------------
 var dietSelect = document.getElementById("diet");
@@ -64,10 +96,10 @@ var intolerancesSelect = document.getElementById("intolerances");
 
 //Earnest apiKey: 15078b5e06594cb3ab818e08ec72e030
 // Jose apiKey: 43050d7446924af49c324ae43ecfbafa
-var apiReciKey = "4c1850eb22000d948347395ddcfbf45dfaef73ec";
+var apiReciKey = "15078b5e06594cb3ab818e08ec72e030";
 var RecipeEndpoint = `https://api.spoonacular.com/recipes/complexSearch?diet=${dietSelect.value}&cuisine=${cuisineSelect.value}&intolerances=${intolerancesSelect.value}&number=15&apiKey=${apiReciKey}`;
 
-var apiReciKey = "4c1850eb22000d948347395ddcfbf45dfaef73ec";
+// var apiReciKey = "4c1850eb22000d948347395ddcfbf45dfaef73ec";
 var recipeButton = document.getElementById("randRecipes");
 var recipeSection = document.querySelector(".unhideRecipeInfo");
 var recipeTitle = document.getElementById("recipeTitle");
